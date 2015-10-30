@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6Z-D5-q1S">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection Controller-->
+        <scene sceneID="FrO-XE-S61">
+            <objects>
+                <collectionViewController id="a6Z-D5-q1S" customClass="CollectionController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rhw-1Z-3pb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.7509765625" green="0.43053556739999999" blue="0.36726459700000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="azB-FN-rS1">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="fp9-tD-17g" customClass="CollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" highlightedImage="2" translatesAutoresizingMaskIntoConstraints="NO" id="GeK-tG-Csy">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yin-Ul-bE8">
+                                            <rect key="frame" x="85" y="0.0" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="i2j-gK-lhD"/>
+                                                <constraint firstAttribute="height" constant="15" id="lHV-f2-mxH"/>
+                                            </constraints>
+                                            <state key="normal" image="checkbox_no">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" image="checkbox_yes"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="GeK-tG-Csy" secondAttribute="trailing" constant="-8" id="0pK-13-dzd"/>
+                                    <constraint firstItem="GeK-tG-Csy" firstAttribute="leading" secondItem="fp9-tD-17g" secondAttribute="leadingMargin" constant="-8" id="7kk-ja-XyM"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="GeK-tG-Csy" secondAttribute="bottom" constant="-8" id="GO4-oh-r7F"/>
+                                    <constraint firstItem="yin-Ul-bE8" firstAttribute="top" secondItem="fp9-tD-17g" secondAttribute="topMargin" constant="-8" id="YES-Qu-rdM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="yin-Ul-bE8" secondAttribute="trailing" constant="-8" id="tHE-KO-9UA"/>
+                                    <constraint firstItem="GeK-tG-Csy" firstAttribute="top" secondItem="fp9-tD-17g" secondAttribute="topMargin" constant="-8" id="zG3-n5-4xA"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
+                                <connections>
+                                    <outlet property="cellButton" destination="yin-Ul-bE8" id="8ZT-FP-xpk"/>
+                                    <outlet property="cellImage" destination="GeK-tG-Csy" id="avB-To-fP8"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="a6Z-D5-q1S" id="W85-us-gEJ"/>
+                            <outlet property="delegate" destination="a6Z-D5-q1S" id="sfd-JV-hce"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y87-gr-BJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="446"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="1024" height="518"/>
+        <image name="2" width="400" height="392"/>
+        <image name="checkbox_no" width="43" height="43"/>
+        <image name="checkbox_yes" width="44" height="44"/>
+    </resources>
+</document>
